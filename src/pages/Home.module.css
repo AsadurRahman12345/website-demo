@@ -516,24 +516,52 @@
   }
 
   .heroSection {
-    height: 500px;
-    margin: 20px 0 50px;
+    height: 460px;
+    margin: 20px 0 40px;
   }
 
   .heroContent {
-    margin: 20px auto;
-    width: calc(100% - 40px);
-    padding: 20px;
+    margin: 0 auto;
+    width: calc(100% - 30px);
+    padding: 24px 20px;
     text-align: center;
+    border-radius: 16px;
+  }
+
+  .heroSubtitle {
+    font-size: 0.75rem;
+    letter-spacing: 0.15em;
+    margin-bottom: 8px;
   }
 
   .heroTitle {
-    font-size: 2.2rem;
+    font-size: 1.6rem;
+    line-height: 1.2;
+    margin-bottom: 12px;
+  }
+
+  .heroDesc {
+    font-size: 0.85rem;
+    line-height: 1.4;
+    margin-bottom: 20px;
   }
 
   .heroActions {
-    flex-direction: column;
+    flex-direction: row;
+    justify-content: center;
     gap: 10px;
+  }
+
+  .heroActions button {
+    padding: 10px 16px !important;
+    font-size: 0.8rem !important;
+    flex: 1;
+    max-width: 140px;
+    justify-content: center;
+    white-space: nowrap;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
   }
 
   .arrowBtn {
