@@ -1,0 +1,257 @@
+.footer {
+  background: rgba(248, 249, 250, 0.85);
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
+  border-top: 1px solid rgba(0, 0, 0, 0.05);
+  padding: 80px 40px 30px;
+  position: relative;
+  overflow: hidden;
+  z-index: 10;
+  margin-top: auto;
+}
+
+.grid {
+  max-width: 1200px;
+  margin: 0 auto 60px;
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 2fr;
+  gap: 40px;
+}
+
+.brandCol {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.tagline {
+  font-family: var(--font-serif);
+  font-size: 1.6rem;
+  font-style: italic;
+  color: var(--accent-gold);
+}
+
+.desc {
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+.socials {
+  display: flex;
+  gap: 12px;
+  margin-top: 10px;
+}
+
+.socialIcon {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.02);
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-secondary);
+  transition: var(--transition-smooth);
+  text-decoration: none;
+}
+
+.socialIcon:hover {
+  color: white;
+  background: #0f0e13;
+  transform: translateY(-3px) scale(1.1);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  border-color: transparent;
+}
+
+/* Columns for Links */
+.linkCol {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.heading {
+  font-family: var(--font-serif);
+  font-size: 1.25rem;
+  color: #0f0e13;
+  position: relative;
+  padding-bottom: 8px;
+}
+
+.heading::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 30px;
+  height: 2px;
+  background: #0f0e13;
+}
+
+.links {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.links a {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  text-decoration: none;
+  transition: var(--transition-fast);
+  cursor: pointer;
+}
+
+.links a:hover {
+  color: #0f0e13;
+  transform: translateX(4px);
+  display: inline-block;
+}
+
+/* Map Col */
+.mapCol {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.mapContainer {
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  height: 150px;
+  position: relative;
+  opacity: 0.9;
+  transition: var(--transition-smooth);
+}
+
+.mapContainer:hover {
+  opacity: 1;
+}
+
+.mapContainer iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+/* Newsletter section at the bottom row */
+.newsletterSection {
+  max-width: 1200px;
+  margin: 0 auto 40px;
+  padding: 30px 40px;
+  background: rgba(0, 0, 0, 0.01);
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+  backdrop-filter: var(--glass-blur);
+}
+
+.newsInfo {
+  flex: 1;
+}
+
+.newsTitle {
+  font-size: 1.4rem;
+  color: #0f0e13;
+  margin-bottom: 6px;
+}
+
+.newsDesc {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+}
+
+.form {
+  display: flex;
+  gap: 10px;
+  min-width: 400px;
+}
+
+.input {
+  flex: 1;
+  background: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 30px;
+  padding: 12px 24px;
+  color: #0f0e13;
+  outline: none;
+  font-size: 0.9rem;
+  transition: var(--transition-fast);
+}
+
+.input:focus {
+  border-color: #0f0e13;
+}
+
+.submitBtn {
+  background: #0f0e13;
+  color: white;
+  border: none;
+  padding: 12px 28px;
+  border-radius: 30px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: var(--transition-smooth);
+}
+
+.submitBtn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Bottom licensing block */
+.bottom {
+  border-top: 1px solid rgba(0, 0, 0, 0.05);
+  padding-top: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.bottomText {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+
+/* Responsive configurations */
+@media (max-width: 1024px) {
+  .grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+  }
+  
+  .newsletterSection {
+    flex-direction: column;
+    align-items: stretch;
+    padding: 24px;
+  }
+
+  .form {
+    min-width: unset;
+  }
+}
+
+@media (max-width: 600px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .footer {
+    padding: 50px 20px 30px;
+  }
+
+  .bottom {
+    flex-direction: column;
+    gap: 15px;
+    text-align: center;
+  }
+}

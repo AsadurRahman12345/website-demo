@@ -1,0 +1,365 @@
+.cartContainer {
+  padding: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.titleSection {
+  margin-bottom: 40px;
+  text-align: left;
+}
+
+.title {
+  font-family: var(--font-serif);
+  font-size: 3rem;
+  color: #0f0e13;
+  margin-bottom: 8px;
+}
+
+.subtitle {
+  color: var(--text-secondary);
+  font-size: 1rem;
+}
+
+.layout {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 40px;
+  align-items: start;
+}
+
+/* Left Cart Items List */
+.cartItemsCard {
+  padding: 40px;
+  text-align: left;
+}
+
+.sectionHeading {
+  font-family: var(--font-serif);
+  font-size: 1.8rem;
+  color: #0f0e13;
+  margin-bottom: 25px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  padding-bottom: 10px;
+}
+
+.cartList {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.cartItem {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.03);
+  padding-bottom: 20px;
+}
+
+.cartItem:last-child {
+  border: none;
+  padding-bottom: 0;
+}
+
+.itemImage {
+  width: 70px;
+  height: 70px;
+  border-radius: 10px;
+  background-size: cover;
+  background-position: center;
+  border: 1px solid rgba(0,0,0,0.05);
+}
+
+.itemDetails {
+  flex-grow: 1;
+}
+
+.itemName {
+  font-family: var(--font-serif);
+  font-size: 1.2rem;
+  color: #0f0e13;
+  margin-bottom: 2px;
+}
+
+.itemMeta {
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+}
+
+.quantityControls {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.qtyBtn {
+  background: rgba(0, 0, 0, 0.02);
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  color: #0f0e13;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: var(--transition-fast);
+}
+
+.qtyBtn:hover {
+  background: rgba(0, 0, 0, 0.05);
+  border-color: #0f0e13;
+}
+
+.qtyVal {
+  font-size: 0.95rem;
+  font-weight: 600;
+  min-width: 15px;
+  text-align: center;
+}
+
+.priceCol {
+  text-align: right;
+  min-width: 80px;
+}
+
+.itemPrice {
+  font-weight: 600;
+  color: var(--accent-gold);
+  font-size: 1.15rem;
+}
+
+.removeBtn {
+  background: transparent;
+  border: none;
+  color: var(--text-muted);
+  cursor: pointer;
+  padding: 8px;
+  border-radius: 50%;
+  transition: var(--transition-fast);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.removeBtn:hover {
+  color: #ef4444;
+  background: rgba(239, 68, 68, 0.08);
+}
+
+.emptyCart {
+  text-align: center;
+  padding: 40px 0;
+}
+
+/* Right Billing Panel */
+.checkoutPanel {
+  padding: 40px;
+  text-align: left;
+}
+
+.costSummary {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 30px;
+  background: rgba(0,0,0,0.01);
+  padding: 20px;
+  border-radius: 12px;
+  border: 1px solid rgba(0,0,0,0.03);
+}
+
+.summaryRow {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+}
+
+.totalRow {
+  border-top: 1px solid rgba(0, 0, 0, 0.08);
+  padding-top: 12px;
+  margin-top: 4px;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #0f0e13;
+}
+
+.formGroup {
+  margin-bottom: 18px;
+}
+
+.label {
+  display: block;
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: var(--text-secondary);
+  margin-bottom: 6px;
+}
+
+.row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+}
+
+/* Payment selection */
+.paymentGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  margin-bottom: 30px;
+}
+
+.paymentOption {
+  padding: 12px 5px;
+  background: rgba(0,0,0,0.02);
+  border: 1px solid rgba(0,0,0,0.08);
+  border-radius: 8px;
+  color: var(--text-secondary);
+  font-size: 0.8rem;
+  font-weight: 600;
+  cursor: pointer;
+  text-align: center;
+  transition: var(--transition-fast);
+  text-transform: uppercase;
+}
+
+.paymentOption:hover {
+  background: rgba(0,0,0,0.05);
+  color: #0f0e13;
+}
+
+.paymentOptionActive {
+  background: #0f0e13 !important;
+  color: white !important;
+  border-color: #0f0e13 !important;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+}
+
+/* Loader Screen */
+.loaderOverlay {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 60px 20px;
+  text-align: center;
+  gap: 18px;
+}
+
+.spinner {
+  width: 45px;
+  height: 45px;
+  border: 3px solid rgba(0,0,0,0.03);
+  border-top-color: var(--accent-cyan);
+  border-radius: 50%;
+  animation: spin 1s infinite linear;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+/* Receipt Screen */
+.receiptCard {
+  max-width: 550px;
+  margin: 40px auto;
+  padding: 50px;
+  text-align: center;
+}
+
+.successIcon {
+  color: var(--accent-cyan);
+  margin-bottom: 10px;
+  animation: bounce 0.6s ease;
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+.receiptHeading {
+  font-family: var(--font-serif);
+  font-size: 2.2rem;
+  color: #0f0e13;
+  margin-bottom: 8px;
+}
+
+.receiptDesc {
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+  margin-bottom: 30px;
+}
+
+.receiptDetails {
+  background: rgba(0, 0, 0, 0.01);
+  border: 1px solid rgba(0,0,0,0.05);
+  border-radius: 12px;
+  padding: 20px;
+  margin-bottom: 35px;
+  text-align: left;
+}
+
+.receiptRow {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  margin-bottom: 10px;
+}
+
+.receiptRow:last-child {
+  margin-bottom: 0;
+}
+
+.receiptTotalRow {
+  border-top: 1px dashed rgba(0,0,0,0.08);
+  padding-top: 12px;
+  margin-top: 12px;
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: #0f0e13;
+}
+
+/* Responsiveness */
+@media (max-width: 900px) {
+  .layout {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 500px) {
+  .cartContainer {
+    padding: 20px;
+  }
+
+  .cartItemsCard,
+  .checkoutPanel,
+  .receiptCard {
+    padding: 24px;
+  }
+
+  .cartItem {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 15px;
+  }
+
+  .priceCol {
+    text-align: left;
+    min-width: unset;
+  }
+
+  .row {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+
+  .paymentGrid {
+    grid-template-columns: 1fr;
+  }
+}
