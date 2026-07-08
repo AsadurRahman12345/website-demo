@@ -185,6 +185,9 @@ export default function Home({ products, addToCart, setCurrentRoute, setInitialC
                 style={{ backgroundImage: `url(${slide.image})` }}
               />
               <div className={styles.heroContent}>
+                <div className={styles.heroBadge}>
+                  <span>✦ Curated Choice</span>
+                </div>
                 <span className={styles.heroSubtitle}>{slide.subtitle}</span>
                 <h1 className={styles.heroTitle}>{slide.title}</h1>
                 <p className={styles.heroDesc}>{slide.desc}</p>
@@ -352,7 +355,10 @@ export default function Home({ products, addToCart, setCurrentRoute, setInitialC
             return (
               <div key={index} className={`${styles.storeCard} glass-panel ${anim}`}>
                 <div className={styles.storeHeader}>
-                  <h3 className={styles.storeName}>{store.name}</h3>
+                  <h3 className={styles.storeName}>
+                    {store.name}
+                    <span className={styles.verifiedBadge} title="Verified Curator">✓</span>
+                  </h3>
                   <span className={styles.storeRating}>
                     ★ {store.rating} <span style={{ color: 'var(--text-muted)', fontSize: '0.75rem' }}>({store.reviews})</span>
                   </span>
